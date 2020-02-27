@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./index.scss";
 import logo from "../static/img/logo.png";
+import aliyun from "../static/img/aliyun.png";
+import alibaba from "../static/img/alibab.svg";
 import JobList from "../components/jobList/jobList";
 
 class Index extends Component {
@@ -66,7 +68,6 @@ class Index extends Component {
           time: "5小时前",
           city: "杭州"
         }
-
       ]
     };
   }
@@ -99,7 +100,7 @@ class Index extends Component {
   }
 
   render() {
-    let { data ,positionData} = this.state;
+    let { data, positionData } = this.state;
     return (
       <div className="index">
         <div className="header">
@@ -179,9 +180,27 @@ class Index extends Component {
           </div>
         </div>
         <div className="content">
-          <JobList positionData={positionData}></JobList>
+          <div className="c_left">
+            <JobList positionData={positionData}></JobList>
+          </div>
+          <div className="c_right">
+            <div style={{ width: "100%" }}>
+              <a>
+                <img src={aliyun} className="c_right_top_img" />
+              </a>
+            </div>
+            <div style={{ width: "100%" }}>
+              <a>
+                <img src={alibaba} className="c_right_bottom_img" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="footer">footer</div>
+        <div className="footer">
+          <div className="footer_con">
+            阿里巴巴集团 Copyright ©1999-2020 版权所有
+          </div>
+        </div>
       </div>
     );
   }

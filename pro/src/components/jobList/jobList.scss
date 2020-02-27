@@ -1,8 +1,28 @@
-.jobList{
-ul li{
+.jobList {
+  overflow: hidden;
+  .ant-card-body {
+    overflow: hidden;
+  }
+  ul {
+    padding: 0;
+    overflow: hidden;
 
-    display: flex;
-    justify-content: space-around;
-}
-
+    li {
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      a {
+        width: 50%;
+      }
+      .time {
+        width: 25%;
+        text-align: right;
+      }
+      .city {
+        width: 25%;
+        text-align: left;
+        text-align: center;
+      }
+    }
+  }
 }
